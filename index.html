@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!-- Icons -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Titan+One" rel="stylesheet">
+	<!-- jquery cdn -->
+	<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+	<title>Yeshua's Remodeling</title>
+</head>
+<body>
+	<div id="banner">
+		<h3><i class="fa fa-envelope" aria-hidden="true"></i>   yeshuaremodeling@gmail.com</h3>
+
+		<h3 id="lic_num">License #: 917824 ~ Call us today! (323) 915 - 4473</h1>
+	</div>
+	<div id="nav-bar">
+		<img id="logo" src="logo.jpg">
+		<ul>
+		<li id="home_btn"><a href="#">Home</a></li>
+		<li id="about_btn"><a href="#">About</a></li>
+		<li id="services_btn"><a href="#">Services</a></li>
+		<li id="contact_btn"><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<div id="home">
+		<div id="slideshow_container">
+			<h1 id="slideshow_text">Serving the Los Angeles area!</h1>
+			<div>
+				<img src="image3.jpg" style="width: 100%; height: 100%;">
+			</div>
+			<div>
+				<img src="image2.jpg" style="width: 100%; height: 100%;">
+			</div>
+			<div>
+				<img src="image1.jpg" style="width: 100%; height: 100%;">
+			</div>
+		</div>
+	</div>
+	<div id="about">
+		<h1 id="about_title">About:</h1>
+		<div id="about_left">
+		<p id="about_paragraph">Yeshua's Remodeling has been in the business for 15 years. Offering a wide range of services, and covering all of the Los Angeles area. Our goal is to make your vision a reality. If we don't perform what you're looking for then give us a call so we can meet your needs! We've experienced 100% customer satisfaction.</p>
+		<p id="about_testimonial">"Yeshua is a professional worker. Always on time for the work he had to do for me and most importantly I'm in love with how my kitchen turned out!" - Proud cusomter Ashley West</p>
+		</div>
+		<img id="about_logo" src="logo.jpg">
+	</div>
+	<div id="services">
+		<h1 id="services_title">Services</h1>
+		<div id="services_paint">
+			<img id="paint_picture" src="paint.jpg">
+			<h1>PAINT</h1>
+			<p>If you need a interior or exterior paint job done, we can help. We paint exterior buildings, apartments, and houses. And interior kithens, bathrooms, bedroom, and office spaces.</p>
+		</div>
+		<div id="services_plumbing">
+			<img id="plumbing_picture" src="plumbing.jpg">
+			<h1>PLUMBING</h1>
+			<p>Having pipe line trouble in your home, apartment, or property? We can help you. Anything from repiping to repairing a pipe that's leaking.</p>
+		</div>
+		<div id="services_electricity">
+			<img id="electricity_picture" src="electricity.jpg">
+			<h1>ELECTRICITY</h1>
+			<p>Need electrical work done? We have professional electricians to resolve your electrical issues. You need some rewiring work done in your home, apartment or property? We can help.</p>
+		</div>
+		<div id="services_par_div">
+		<p id="services_paragraph">Give us a call if you need something done out of our service range, we can meet your needs! Need a minor maintenance job done? Reach us, we will try out best to help you!</p>
+		</div>		
+	</div>
+	<div id="contact">
+		<h1>Contact Us</h1>
+		<h2>Email: yeshuaremodeling@gmail.com</h2>
+		<h2>Phone Number: (323) 915-4473</h2>
+		<p>© 2018 Yeshuas Remodeling Inc. | Website done by Erik Landaverde</p>
+	</div>
+
+<script type="text/javascript">
+	// This is jquery code for my scroll nav bar effect
+	  $(document).ready(function() {
+	  $(window).scroll(function () {
+	      console.log($(window).scrollTop())
+	    if ($(window).scrollTop() > 78) {
+	      $('#nav-bar').addClass('navbar-fixed');
+	    }
+	    if ($(window).scrollTop() < 80) {
+	      $('#nav-bar').removeClass('navbar-fixed');
+	    }
+	  });
+	  // This is jquery code for my slideshow
+		$("#slideshow_container > div:gt(0)").hide();
+
+		setInterval(function() {
+		  $('#slideshow_container > div:first')
+		    .fadeOut(600)
+		    .next()
+		    .fadeIn(500)
+		    .end()
+		    .appendTo('#slideshow_container');
+		}, 4000);
+	});
+
+</script>	
+
+</body>
+</html>
